@@ -1,6 +1,6 @@
 # Foal Passkeys
 
-An demonstration of how to use passkeys with a server based on the [FoalTS](https://foalts.org) application framework.
+A demonstration of how to use passkeys with a server based on the [FoalTS](https://foalts.org) application framework.
 
 ## References
 
@@ -28,7 +28,7 @@ This implementation uses the @simplewebauthn/server and @simplewebauthn/browser 
 git clone https://github.com/warren-gallagher/foal-passkeys.git
 cd foal-passkeys
 npm install
-npm make migrations
+npm run migrations
 ```
 
 ## Start the server
