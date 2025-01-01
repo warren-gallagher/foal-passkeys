@@ -53,7 +53,7 @@ npm run dev
 
 ## Modifying the demo
 
-### Configuration
+### Configuration ```config/default.json```
 
 ```json
 {
