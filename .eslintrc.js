@@ -23,6 +23,7 @@ module.exports = {
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/quotes': ['error', 'single'],
+    'no-empty-pattern': 'off',
     'arrow-parens': ['error', 'as-needed'],
     'max-classes-per-file': 'off',
     'no-console': 'off',

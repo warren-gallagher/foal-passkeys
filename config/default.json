@@ -2,12 +2,20 @@
   "port": "env(PORT)",
   "settings": {
     "loggerFormat": "foal",
-    "session": {
-      "store": "@foal/typeorm"
+    "logger": {
+      "logLevel": "debug"
+    },
+    "cookieParser": {
+      "secret": "cookie signing secret"
     }
   },
   "database": {
     "type": "sqlite",
     "database": "./db.sqlite3"
+  },
+  "relyingParty": {
+    "name": "Passkeys",
+    "id": "localhost",
+    "origin": "http://localhost:3001"
   }
 }

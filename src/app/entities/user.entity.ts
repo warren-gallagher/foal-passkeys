@@ -1,9 +1,28 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  BaseEntity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToMany,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+import { Credential } from './credential.entity';
 
 @Entity()
-export class User extends BaseEntity {
+export class User  extends BaseEntity {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
-  @PrimaryGeneratedColumn()
-  id: number;
+  @Column({ unique: true })
+  email: string;
 
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @UpdateDateColumn()
+  updatedAt: Date;
+
+  @OneToMany<Credential>(() => Credential, credential => credential.user, { cascade: true })
+  credentials: Credential[];
 }
