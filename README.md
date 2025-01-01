@@ -9,6 +9,11 @@ This demo was built based on the article: [https://www.corbado.com/blog/passkey-
 This implementation uses the @simplewebauthn/server and @simplewebauthn/browser packages. Documenation on these can be found at:
 [https://simplewebauthn.dev/docs/](https://simplewebauthn.dev/docs/)
 
+### Personal Editorial
+
+Not necessarily advocating for passkeys given the state of the ecosystems, just curious. For a good roundup of the state of Passkeys
+as of December 30th, 2024, check out: [https://arstechnica.com/security/2024/12/passkey-technology-is-elegant-but-its-most-definitely-not-usable-security/](https://arstechnica.com/security/2024/12/passkey-technology-is-elegant-but-its-most-definitely-not-usable-security/)
+
 ## Capabilities
 
 1. Allows HTML+Javascript registration of a passkey with the server
