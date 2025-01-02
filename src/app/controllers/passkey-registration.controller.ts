@@ -7,7 +7,7 @@ import { CredentialService } from '../services/credential.service';
 import { uint8ArrayToBase64 } from '../utils/utils';
 
 const RegisterStartRequestSchema = z.object({
-  email: z.string().email()
+  email: z.string().email().toLowerCase().trim()
 });
 
 const RelyingPartyConfigSchema = z.object({

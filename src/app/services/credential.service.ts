@@ -18,10 +18,10 @@ export class CredentialService {
         return createdCredential;
     }
 
-    async getById(user: User, id: string): Promise<WebAuthnCredential> {
+    async getById(id: string): Promise<WebAuthnCredential> {
         const credential = await Credential.findOneBy({ id: id });
         if( !credential ) {
-            const error = `Error retrieving credential id=${id} for user ${user.email}`
+            const error = `Error retrieving credential id=${id}`
             this.logger.error(error);
             throw new Error(error);
         }
@@ -57,10 +57,10 @@ export class CredentialService {
         return allowedPasskeys;
     }
 
-    async updateCounter(user: User, credentialId: string, newCounter: number) {
+    async updateCounter(credentialId: string, newCounter: number) {
         const credential = await Credential.findOneBy({ id: credentialId });
         if( !credential ) {
-            const error = `Error retrieving credential id=${credentialId} for user ${user.email}`
+            const error = `Error retrieving credential id=${credentialId}`
             this.logger.error(error);
             throw new Error(error);
         }
